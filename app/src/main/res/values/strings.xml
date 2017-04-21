@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Summary1704</string>
+
+    <string name="msg_default_format">Format</string>
+    <string name="msg_default_meta">Metadata</string>
+    <string name="msg_default_time">Time</string>
+    <string name="msg_default_type">Type</string>
 </resources>

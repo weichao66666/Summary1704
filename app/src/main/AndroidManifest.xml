@@ -9,16 +9,21 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-feature android:name="android.hardware.camera.any" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:theme">
         <activity
-            android:name="io.weichao.summary1704.activity.MainActivity"
+            android:name="io.weichao.summary1704.activity.SplashActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,13 +35,25 @@
             android:name="io.weichao.summary1704.activity.CompassActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:name="io.weichao.summary1704.activity.ExhibitActivity"
+            android:screenOrientation="landscape" />
+        <activity
             android:name="io.weichao.summary1704.activity.FaceDetectionActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name="io.weichao.summary1704.activity.GifActivity"
+            android:name="io.weichao.summary1704.activity.GIFActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="io.weichao.summary1704.activity.ImageActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="io.weichao.summary1704.activity.MainActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name="io.weichao.summary1704.activity.SphereActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="io.weichao.summary1704.activity.VideoActivity"
             android:screenOrientation="landscape" />
     </application>
 

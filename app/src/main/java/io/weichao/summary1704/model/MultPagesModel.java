@@ -4,17 +4,16 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.listener.BaseOnTouchListener;
 import io.weichao.model.BaseModel;
 import io.weichao.summary1704.R;
 import io.weichao.summary1704.activity.CompassActivity;
+import io.weichao.summary1704.activity.ExhibitActivity;
 import io.weichao.summary1704.activity.FaceDetectionActivity;
-import io.weichao.summary1704.activity.GifActivity;
+import io.weichao.summary1704.activity.GIFActivity;
 import io.weichao.summary1704.activity.MainActivity;
 import io.weichao.summary1704.activity.SphereActivity;
 import io.weichao.summary1704.adapter.MultPagesAdapter;
-import io.weichao.util.ConstantUtil;
 import io.weichao.view.MultPagesView;
 
 /**
@@ -34,8 +33,6 @@ public class MultPagesModel extends BaseModel {
 
         BaseOnTouchListener onTouchListener = new BaseOnTouchListener();
         onTouchListener.callback = this;
-        onTouchListener.scrollDistanceWidthLimit = (int) (BaseFragmentActivity.width * ConstantUtil.ACTIVITY_SCROLL_DISTANCE_PERCENT);
-        onTouchListener.scrollDistanceHeightLimit = (int) (BaseFragmentActivity.height * ConstantUtil.ACTIVITY_SCROLL_DISTANCE_PERCENT);
 
         RelativeLayout relativeLayout = (RelativeLayout) View.inflate(activity, R.layout.layout_model_mult_pages, null);
         mMultPagesView = (MultPagesView) relativeLayout.findViewById(R.id.view);
@@ -51,15 +48,18 @@ public class MultPagesModel extends BaseModel {
 //        Toast.makeText(mActivity, "index:" + index, Toast.LENGTH_SHORT).show();
         switch (index) {
             case 0:
-                mActivity.startActivity(new Intent(mActivity, GifActivity.class));
+                mActivity.startActivity(new Intent(mActivity, ExhibitActivity.class));
                 break;
             case 1:
-                mActivity.startActivity(new Intent(mActivity, SphereActivity.class));
+                mActivity.startActivity(new Intent(mActivity, GIFActivity.class));
                 break;
             case 2:
-                mActivity.startActivity(new Intent(mActivity, CompassActivity.class));
+                mActivity.startActivity(new Intent(mActivity, SphereActivity.class));
                 break;
             case 3:
+                mActivity.startActivity(new Intent(mActivity, CompassActivity.class));
+                break;
+            case 4:
                 mActivity.startActivity(new Intent(mActivity, FaceDetectionActivity.class));
                 break;
             default:

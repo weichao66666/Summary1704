@@ -1,6 +1,7 @@
 package io.weichao.summary1704.activity;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -27,6 +28,8 @@ public class CompassActivity extends BaseFragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.top_in, R.anim.bottom_out);
+
         RelativeLayout rootView = (RelativeLayout) View.inflate(this, R.layout.activity_main, null);
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(rootView);
@@ -88,5 +91,16 @@ public class CompassActivity extends BaseFragmentActivity {
         if (mSensorModel != null) {
             mSensorModel.onDestroy();
         }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        return gestureDetector.onTouchEvent(event);
+    }
+
+    @Override
+    public void onFlingDown() {
+        finish();
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 }

@@ -1,24 +1,28 @@
 package io.weichao.summary1704.activity;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.model.CameraModel;
-import io.weichao.model.GifModel;
+import io.weichao.model.GIFModel;
+import io.weichao.summary1704.R;
 
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
 
-public class GifActivity extends BaseFragmentActivity {
+public class GIFActivity extends BaseFragmentActivity {
     private CameraModel mCameraModel;
-    private GifModel mGifModel;
+    private GIFModel mGIFModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.top_in, R.anim.bottom_out);
+
         RelativeLayout rootView = new RelativeLayout(this);
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(rootView);
@@ -26,8 +30,8 @@ public class GifActivity extends BaseFragmentActivity {
         mCameraModel = new CameraModel(this);
         rootView.addView(mCameraModel.view);
 
-        mGifModel = new GifModel(this);
-        rootView.addView(mGifModel.view);
+        mGIFModel = new GIFModel(this);
+        rootView.addView(mGIFModel.view);
     }
 
     @Override
@@ -36,8 +40,8 @@ public class GifActivity extends BaseFragmentActivity {
         if (mCameraModel != null) {
             mCameraModel.onResume();
         }
-        if (mGifModel != null) {
-            mGifModel.onResume();
+        if (mGIFModel != null) {
+            mGIFModel.onResume();
         }
     }
 
@@ -47,8 +51,8 @@ public class GifActivity extends BaseFragmentActivity {
         if (mCameraModel != null) {
             mCameraModel.onPause();
         }
-        if (mGifModel != null) {
-            mGifModel.onPause();
+        if (mGIFModel != null) {
+            mGIFModel.onPause();
         }
     }
 
@@ -58,8 +62,19 @@ public class GifActivity extends BaseFragmentActivity {
         if (mCameraModel != null) {
             mCameraModel.onDestroy();
         }
-        if (mGifModel != null) {
-            mGifModel.onDestroy();
+        if (mGIFModel != null) {
+            mGIFModel.onDestroy();
         }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        return gestureDetector.onTouchEvent(event);
+    }
+
+    @Override
+    public void onFlingDown() {
+        finish();
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 }
