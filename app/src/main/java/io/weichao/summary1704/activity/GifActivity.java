@@ -32,6 +32,7 @@ public class GIFActivity extends BaseFragmentActivity {
 
         mGIFModel = new GIFModel(this);
         rootView.addView(mGIFModel.view);
+
     }
 
     @Override
