@@ -68,9 +68,10 @@ public class ExhibitActivity extends BaseFragmentActivity implements DecodeCallb
     }
 
     @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
+    public boolean onTouchEvent(MotionEvent event) {
         if (mViewPagerModel != null) {
-            return mViewPagerModel.view.dispatchTouchEvent(event);
+            Log.d(ConstantUtil.TAG, "00000");
+            return mViewPagerModel.view.onTouchEvent(event);
         }
 
         Log.d(ConstantUtil.TAG, "111111");

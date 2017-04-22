@@ -154,7 +154,7 @@ public class VideoActivity extends BaseFragmentActivity implements SurfaceHolder
     }
 
     @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
+    public boolean onTouchEvent(MotionEvent ev) {
         return gestureDetector.onTouchEvent(ev);
     }
 

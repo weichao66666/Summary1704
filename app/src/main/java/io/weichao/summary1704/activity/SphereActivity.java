@@ -62,4 +62,10 @@ public class SphereActivity extends BaseFragmentActivity {
             mCameraModel.onDestroy();
         }
     }
+
+//    @Override
+//    public void onSingleTap() {
+//        finish();
+//        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+//    }
 }
