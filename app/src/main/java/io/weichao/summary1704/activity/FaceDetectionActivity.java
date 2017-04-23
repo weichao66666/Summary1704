@@ -1,20 +1,21 @@
 package io.weichao.summary1704.activity;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import io.weichao.activity.BaseFragmentActivity;
+import io.weichao.model.FaceDetectionModel;
 import io.weichao.summary1704.R;
-import io.weichao.model.SphereModel;
 
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
 
 public class FaceDetectionActivity extends BaseFragmentActivity {
-    private SphereModel mSphereModel;
+    private FaceDetectionModel mFaceDetectionModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,31 +24,42 @@ public class FaceDetectionActivity extends BaseFragmentActivity {
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(rootView);
 
-        mSphereModel = new SphereModel(this);
-        rootView.addView(mSphereModel.view);
+        mFaceDetectionModel = new FaceDetectionModel(this);
+        rootView.addView(mFaceDetectionModel.view);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (mSphereModel != null) {
-            mSphereModel.onResume();
+        if (mFaceDetectionModel != null) {
+            mFaceDetectionModel.onResume();
         }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if (mSphereModel != null) {
-            mSphereModel.onPause();
+        if (mFaceDetectionModel != null) {
+            mFaceDetectionModel.onPause();
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mSphereModel != null) {
-            mSphereModel.onDestroy();
+        if (mFaceDetectionModel != null) {
+            mFaceDetectionModel.onDestroy();
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return gestureDetector.onTouchEvent(event);
+    }
+
+    @Override
+    public void onFlingDown() {
+        finish();
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 }
