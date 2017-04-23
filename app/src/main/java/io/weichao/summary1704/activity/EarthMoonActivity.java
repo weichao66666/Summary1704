@@ -6,14 +6,14 @@ import android.widget.RelativeLayout;
 
 import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.model.CameraModel;
-import io.weichao.model.SphereModel;
+import io.weichao.model.EarthMoonModel;
 
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
 
-public class SphereActivity extends BaseFragmentActivity {
-    private SphereModel mSphereModel;
+public class EarthMoonActivity extends BaseFragmentActivity {
+    private EarthMoonModel mSphereModel;
     private CameraModel mCameraModel;
 
     @Override
@@ -23,7 +23,7 @@ public class SphereActivity extends BaseFragmentActivity {
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(rootView);
 
-        mSphereModel = new SphereModel(this);
+        mSphereModel = new EarthMoonModel(this);
         rootView.addView(mSphereModel.view);
 
         mCameraModel = new CameraModel(this);

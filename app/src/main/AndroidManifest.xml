@@ -50,7 +50,7 @@
             android:name="io.weichao.summary1704.activity.MainActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name="io.weichao.summary1704.activity.SphereActivity"
+            android:name="io.weichao.summary1704.activity.EarthMoonActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name="io.weichao.summary1704.activity.VideoActivity"

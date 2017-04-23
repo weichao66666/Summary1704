@@ -12,7 +12,7 @@ import io.weichao.summary1704.activity.ExhibitActivity;
 import io.weichao.summary1704.activity.FaceDetectionActivity;
 import io.weichao.summary1704.activity.GIFActivity;
 import io.weichao.summary1704.activity.MainActivity;
-import io.weichao.summary1704.activity.SphereActivity;
+import io.weichao.summary1704.activity.EarthMoonActivity;
 import io.weichao.summary1704.adapter.MultPagesAdapter;
 import io.weichao.view.MultPagesView;
 
@@ -54,7 +54,7 @@ public class MultPagesModel extends BaseModel {
                 mActivity.startActivity(new Intent(mActivity, GIFActivity.class));
                 break;
             case 2:
-                mActivity.startActivity(new Intent(mActivity, SphereActivity.class));
+                mActivity.startActivity(new Intent(mActivity, EarthMoonActivity.class));
                 break;
             case 3:
                 mActivity.startActivity(new Intent(mActivity, CompassActivity.class));
