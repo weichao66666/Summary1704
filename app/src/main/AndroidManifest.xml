@@ -11,6 +11,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -32,28 +33,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="io.weichao.summary1704.activity.CompassActivity"
+            android:name="io.weichao.summary1704.activity.MainActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name="io.weichao.summary1704.activity.ExhibitActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name="io.weichao.summary1704.activity.FaceDetectionActivity"
+            android:name="io.weichao.summary1704.activity.ImageActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="io.weichao.summary1704.activity.VideoActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name="io.weichao.summary1704.activity.GIFActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name="io.weichao.summary1704.activity.ImageActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name="io.weichao.summary1704.activity.MainActivity"
+            android:name="io.weichao.summary1704.activity.CompassActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name="io.weichao.summary1704.activity.EarthMoonActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name="io.weichao.summary1704.activity.VideoActivity"
+            android:name="io.weichao.summary1704.activity.FaceDetectionActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="io.weichao.summary1704.activity.AR3DActivity"
             android:screenOrientation="landscape" />
     </application>
 

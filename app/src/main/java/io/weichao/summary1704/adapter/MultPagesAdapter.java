@@ -11,10 +11,12 @@ public class MultPagesAdapter extends BaseMultPagesAdapter {
     public MultPagesAdapter(Activity activity) {
         super(activity);
         mImageLists = new ArrayList<>();
-        mImageLists.add(R.mipmap.a);
-        mImageLists.add(R.mipmap.b);
-        mImageLists.add(R.mipmap.c);
-        mImageLists.add(R.mipmap.d);
-        mImageLists.add(R.mipmap.e);
+        mImageLists.add(R.mipmap.exhibit);
+        mImageLists.add(R.mipmap.gif);
+        mImageLists.add(R.mipmap.compass);
+        mImageLists.add(R.mipmap.earth_moon);
+        mImageLists.add(R.mipmap.face_detection);
+        mImageLists.add(R.mipmap.arvideo);
+        mImageLists.add(R.mipmap.ar3d);
     }
 }

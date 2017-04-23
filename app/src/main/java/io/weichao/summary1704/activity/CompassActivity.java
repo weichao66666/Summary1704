@@ -25,6 +25,8 @@ public class CompassActivity extends BaseFragmentActivity {
     private CompassModel mCompassModel;
     private SensorModel mSensorModel;
 
+    private Timer mTimer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,7 @@ public class CompassActivity extends BaseFragmentActivity {
         rootView.addView(mCameraModel.view);
 
         mSensorModel = new SensorModel(this);
+
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
@@ -48,7 +51,8 @@ public class CompassActivity extends BaseFragmentActivity {
                 mCompassModel.setSensorData(sensorDataBean);
             }
         };
-        new Timer().schedule(task, 0, 50);
+        mTimer = new Timer();
+        mTimer.schedule(task, 0, 50);
     }
 
     @Override
@@ -67,7 +71,6 @@ public class CompassActivity extends BaseFragmentActivity {
 
     @Override
     protected void onPause() {
-        super.onPause();
         if (mCameraModel != null) {
             mCameraModel.onPause();
         }
@@ -77,11 +80,14 @@ public class CompassActivity extends BaseFragmentActivity {
         if (mSensorModel != null) {
             mSensorModel.onPause();
         }
+        super.onPause();
     }
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
+        if (mTimer != null) {
+            mTimer.cancel();
+        }
         if (mCameraModel != null) {
             mCameraModel.onDestroy();
         }
@@ -91,6 +97,7 @@ public class CompassActivity extends BaseFragmentActivity {
         if (mSensorModel != null) {
             mSensorModel.onDestroy();
         }
+        super.onDestroy();
     }
 
     @Override

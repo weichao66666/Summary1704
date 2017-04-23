@@ -3,16 +3,19 @@ package io.weichao.summary1704.model;
 import android.content.Intent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import io.weichao.activity.ARVideoActivity;
 import io.weichao.listener.BaseOnTouchListener;
 import io.weichao.model.BaseModel;
 import io.weichao.summary1704.R;
+import io.weichao.summary1704.activity.AR3DActivity;
 import io.weichao.summary1704.activity.CompassActivity;
+import io.weichao.summary1704.activity.EarthMoonActivity;
 import io.weichao.summary1704.activity.ExhibitActivity;
 import io.weichao.summary1704.activity.FaceDetectionActivity;
 import io.weichao.summary1704.activity.GIFActivity;
 import io.weichao.summary1704.activity.MainActivity;
-import io.weichao.summary1704.activity.EarthMoonActivity;
 import io.weichao.summary1704.adapter.MultPagesAdapter;
 import io.weichao.view.MultPagesView;
 
@@ -45,7 +48,7 @@ public class MultPagesModel extends BaseModel {
     @Override
     public void onSingleTap() {
         int index = mMultPagesView.getCurrentChildIndex();
-//        Toast.makeText(mActivity, "index:" + index, Toast.LENGTH_SHORT).show();
+        Toast.makeText(mActivity, "index:" + index, Toast.LENGTH_SHORT).show();
         switch (index) {
             case 0:
                 mActivity.startActivity(new Intent(mActivity, ExhibitActivity.class));
@@ -61,6 +64,12 @@ public class MultPagesModel extends BaseModel {
                 break;
             case 4:
                 mActivity.startActivity(new Intent(mActivity, FaceDetectionActivity.class));
+                break;
+            case 5:
+                mActivity.startActivity(new Intent(mActivity, ARVideoActivity.class));
+                break;
+            case 6:
+                mActivity.startActivity(new Intent(mActivity, AR3DActivity.class));
                 break;
             default:
                 break;

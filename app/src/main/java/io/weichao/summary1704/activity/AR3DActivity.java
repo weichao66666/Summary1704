@@ -1,18 +1,20 @@
 package io.weichao.summary1704.activity;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.model.CameraModel;
 import io.weichao.model.EarthMoonModel;
+import io.weichao.summary1704.R;
 
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
 
-public class EarthMoonActivity extends BaseFragmentActivity {
+public class AR3DActivity extends BaseFragmentActivity {
     private EarthMoonModel mSphereModel;
     private CameraModel mCameraModel;
 
@@ -63,14 +65,14 @@ public class EarthMoonActivity extends BaseFragmentActivity {
         }
     }
 
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        return gestureDetector.onTouchEvent(event);
-//    }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return gestureDetector.onTouchEvent(event);
+    }
 
-//    @Override
-//    public void onSingleTap() {
-//        finish();
-//        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
-//    }
+    @Override
+    public void onSingleTap() {
+        finish();
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+    }
 }
