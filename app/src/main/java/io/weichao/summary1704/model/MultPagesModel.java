@@ -6,10 +6,10 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import io.weichao.activity.ARVideoActivity;
+import io.weichao.activity.NFTActivity;
 import io.weichao.listener.BaseOnTouchListener;
 import io.weichao.model.BaseModel;
 import io.weichao.summary1704.R;
-import io.weichao.summary1704.activity.AR3DActivity;
 import io.weichao.summary1704.activity.CompassActivity;
 import io.weichao.summary1704.activity.EarthMoonActivity;
 import io.weichao.summary1704.activity.ExhibitActivity;
@@ -69,7 +69,7 @@ public class MultPagesModel extends BaseModel {
                 mActivity.startActivity(new Intent(mActivity, ARVideoActivity.class));
                 break;
             case 6:
-                mActivity.startActivity(new Intent(mActivity, AR3DActivity.class));
+                mActivity.startActivity(new Intent(mActivity, NFTActivity.class));
                 break;
             default:
                 break;
