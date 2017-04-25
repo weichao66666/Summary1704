@@ -18,6 +18,6 @@ public class MultPagesAdapter extends BaseMultPagesAdapter {
         mImageLists.add(R.mipmap.earth_moon);
         mImageLists.add(R.mipmap.face_detection);
         mImageLists.add(R.mipmap.arvideo);
-        mImageLists.add(R.mipmap.ar3d);
+        mImageLists.add(R.mipmap.arairplane);
     }
 }

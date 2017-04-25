@@ -1,0 +1,65 @@
+{
+	"coverBeanLists":[
+		{
+			"thumbnailUri":"weichao_assets/qrcode/1/t2.png",
+			"dataMaps":[
+				{
+					"key":"厂商",
+					"value":"保时捷"
+				},
+				{
+					"key":"发动机",
+					"value":"4.6L 608马力 V8"
+				},
+				{
+					"key":"变速箱",
+					"value":"7挡双离合"
+				},
+				{
+					"key":"长*宽*高",
+					"value":"4643*1940*1167(mm)"
+				},
+				{
+					"key":"车身结构",
+					"value":"2门2座硬顶敞篷车"
+				},
+				{
+					"key":"指导价",
+					"value":"1330.80万"
+				},
+				{
+					"key":"动力",
+					"value":"918 Spyder搭载由汽油发动机与两台电动机组成的
+并联式混和动力系统，使918 Spyder可达到纯电力驱动、引擎独立驱动或是混和动力驱动等不同输出模式。而主要动力是由RS Spyder上移植过来、可输出608hp最大马力和530 Nm峰值扭矩的4.8升V8高转引擎，此外在前后轴上还各自搭载了一具电动马达作为辅助动力输出，分别可提供95kW (127匹马力) 与115 kW (154匹马力) 的动力输出，进而让该车的系统综效马力输出高达887匹，经过与之匹配的强化版7速PDK双离合器自手排变速箱之后，只需要2.6秒就可以完成由静止至时速100公里的冲刺，极速可达每小时342公里。"
+				}
+			]
+		}
+	],
+	"imageBeanLists":[
+		{
+			"thumbnailUri":"weichao_assets/qrcode/1/t1.png",
+			"text":"保时捷918图片(1)",
+			"uri":"weichao_assets/qrcode/1/f1.jpg"
+		},
+		{
+			"thumbnailUri":"weichao_assets/qrcode/1/t2.png",
+			"text":"保时捷918图片(2)",
+			"uri":"weichao_assets/qrcode/1/f2.jpg"
+		},
+		{
+			"thumbnailUri":"weichao_assets/qrcode/1/t3.png",
+			"text":"保时捷918图片(3)",
+			"uri":"weichao_assets/qrcode/1/f3.jpg"
+		}
+	],
+	"videoBeanLists":[
+		{
+			"thumbnailUri":"weichao_assets/qrcode/1/i1.jpg",
+			"text":"保时捷918视频",
+			"contentId":"",
+			"provider":"",
+			"uri":"weichao_assets/qrcode/1/v1.mp4",
+			"type":3
+		}
+	]
+}
