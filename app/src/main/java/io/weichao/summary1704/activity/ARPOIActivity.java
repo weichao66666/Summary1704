@@ -6,16 +6,16 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import io.weichao.activity.BaseFragmentActivity;
+import io.weichao.model.ARPOIModel;
 import io.weichao.model.CameraModel;
-import io.weichao.model.GIFModel;
 import io.weichao.summary1704.R;
 
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-public class GIFActivity extends BaseFragmentActivity {
+public class ARPOIActivity extends BaseFragmentActivity {
     private CameraModel mCameraModel;
-    private GIFModel mGIFModel;
+    private ARPOIModel mARPOIModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +29,8 @@ public class GIFActivity extends BaseFragmentActivity {
         mCameraModel = new CameraModel(this);
         rootView.addView(mCameraModel.view);
 
-        mGIFModel = new GIFModel(this);
-        rootView.addView(mGIFModel.view);
+        mARPOIModel = new ARPOIModel(this);
+        rootView.addView(mARPOIModel.view);
     }
 
     @Override
@@ -39,8 +39,8 @@ public class GIFActivity extends BaseFragmentActivity {
         if (mCameraModel != null) {
             mCameraModel.onResume();
         }
-        if (mGIFModel != null) {
-            mGIFModel.onResume();
+        if (mARPOIModel != null) {
+            mARPOIModel.onResume();
         }
     }
 
@@ -50,8 +50,8 @@ public class GIFActivity extends BaseFragmentActivity {
         if (mCameraModel != null) {
             mCameraModel.onPause();
         }
-        if (mGIFModel != null) {
-            mGIFModel.onPause();
+        if (mARPOIModel != null) {
+            mARPOIModel.onPause();
         }
     }
 
@@ -61,8 +61,8 @@ public class GIFActivity extends BaseFragmentActivity {
         if (mCameraModel != null) {
             mCameraModel.onDestroy();
         }
-        if (mGIFModel != null) {
-            mGIFModel.onDestroy();
+        if (mARPOIModel != null) {
+            mARPOIModel.onDestroy();
         }
     }
 

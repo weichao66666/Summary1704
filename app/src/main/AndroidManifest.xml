@@ -12,8 +12,12 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name="io.weichao.application.BaseApplication"
@@ -49,6 +53,9 @@
             android:screenOrientation="landscape" />
         <activity
             android:name="io.weichao.summary1704.activity.GIFActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="io.weichao.summary1704.activity.ARPOIActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name="io.weichao.summary1704.activity.CompassActivity"

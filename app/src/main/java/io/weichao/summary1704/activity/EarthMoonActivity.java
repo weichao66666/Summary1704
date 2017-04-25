@@ -7,11 +7,11 @@ import android.widget.RelativeLayout;
 import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.model.CameraModel;
 import io.weichao.model.EarthMoonModel;
+import io.weichao.summary1704.R;
 
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-
 public class EarthMoonActivity extends BaseFragmentActivity {
     private EarthMoonModel mSphereModel;
     private CameraModel mCameraModel;
@@ -19,6 +19,8 @@ public class EarthMoonActivity extends BaseFragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.top_in, R.anim.bottom_out);
+
         RelativeLayout rootView = new RelativeLayout(this);
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(rootView);

@@ -19,7 +19,6 @@ import io.weichao.summary1704.R;
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-
 public class CompassActivity extends BaseFragmentActivity {
     private CameraModel mCameraModel;
     private CompassModel mCompassModel;

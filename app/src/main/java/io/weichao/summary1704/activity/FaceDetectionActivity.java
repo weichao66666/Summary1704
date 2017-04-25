@@ -13,13 +13,14 @@ import io.weichao.summary1704.R;
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-
 public class FaceDetectionActivity extends BaseFragmentActivity {
     private FaceDetectionModel mFaceDetectionModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.top_in, R.anim.bottom_out);
+
         RelativeLayout rootView = (RelativeLayout) View.inflate(this, R.layout.activity_main, null);
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(rootView);

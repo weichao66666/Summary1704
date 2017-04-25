@@ -1,6 +1,5 @@
 package io.weichao.summary1704.activity;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +10,11 @@ import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.activity.PermissionActivity;
 import io.weichao.library.R;
 import io.weichao.util.PermissionUtil;
+
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+
 
 /**
  * Created by WEI CHAO on 2017/3/27.
@@ -24,7 +28,7 @@ public class SplashActivity extends BaseFragmentActivity {
     /**
      * 所需的全部权限
      */
-    private static final String[] PERMISSIONS = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.INTERNET};
+    private static final String[] PERMISSIONS = new String[]{CAMERA, READ_EXTERNAL_STORAGE, ACCESS_FINE_LOCATION};
 
 
     @Override

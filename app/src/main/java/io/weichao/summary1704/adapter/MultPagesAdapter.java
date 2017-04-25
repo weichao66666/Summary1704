@@ -13,6 +13,7 @@ public class MultPagesAdapter extends BaseMultPagesAdapter {
         mImageLists = new ArrayList<>();
         mImageLists.add(R.mipmap.exhibit);
         mImageLists.add(R.mipmap.gif);
+        mImageLists.add(R.mipmap.arpoi);
         mImageLists.add(R.mipmap.compass);
         mImageLists.add(R.mipmap.earth_moon);
         mImageLists.add(R.mipmap.face_detection);
