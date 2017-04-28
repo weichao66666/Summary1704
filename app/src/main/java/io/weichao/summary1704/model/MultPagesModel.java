@@ -58,10 +58,10 @@ public class MultPagesModel extends BaseModel {
                 mActivity.startActivity(new Intent(mActivity, ARPOIActivity.class));
                 break;
             case 3:
-                mActivity.startActivity(new Intent(mActivity, EarthMoonActivity.class));
+                mActivity.startActivity(new Intent(mActivity, CompassActivity.class));
                 break;
             case 4:
-                mActivity.startActivity(new Intent(mActivity, CompassActivity.class));
+                mActivity.startActivity(new Intent(mActivity, EarthMoonActivity.class));
                 break;
             case 5:
                 mActivity.startActivity(new Intent(mActivity, FaceDetectionActivity.class));

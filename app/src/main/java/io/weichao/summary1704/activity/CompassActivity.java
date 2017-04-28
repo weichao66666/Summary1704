@@ -9,7 +9,6 @@ import android.widget.RelativeLayout;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.bean.SensorDataBean;
 import io.weichao.model.CameraModel;
 import io.weichao.model.CompassModel;
@@ -19,7 +18,7 @@ import io.weichao.summary1704.R;
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-public class CompassActivity extends BaseFragmentActivity {
+public class CompassActivity extends BFragmentActivity {
     private CameraModel mCameraModel;
     private CompassModel mCompassModel;
     private SensorModel mSensorModel;

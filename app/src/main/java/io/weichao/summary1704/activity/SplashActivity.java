@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.activity.PermissionActivity;
 import io.weichao.library.R;
 import io.weichao.util.PermissionUtil;
@@ -20,7 +19,7 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
  * Created by WEI CHAO on 2017/3/27.
  */
 
-public class SplashActivity extends BaseFragmentActivity {
+public class SplashActivity extends BFragmentActivity {
     /**
      * 请求码
      */

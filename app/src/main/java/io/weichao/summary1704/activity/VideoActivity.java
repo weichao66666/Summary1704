@@ -32,12 +32,11 @@ import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.CookiePolicy;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.controller.ExoPlayerMediaController;
 import io.weichao.summary1704.R;
 import io.weichao.summary1704.config.Constant;
 
-public class VideoActivity extends BaseFragmentActivity implements SurfaceHolder.Callback, DemoPlayer.Listener, AudioCapabilitiesReceiver.Listener {
+public class VideoActivity extends BFragmentActivity implements SurfaceHolder.Callback, DemoPlayer.Listener, AudioCapabilitiesReceiver.Listener {
     private static final String CONTENT_EXT_EXTRA = "type";
     private static final CookieManager defaultCookieManager;
 

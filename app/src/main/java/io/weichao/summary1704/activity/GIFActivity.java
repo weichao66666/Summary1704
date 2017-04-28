@@ -5,7 +5,6 @@ import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.model.CameraModel;
 import io.weichao.model.GIFModel;
 import io.weichao.summary1704.R;
@@ -13,7 +12,7 @@ import io.weichao.summary1704.R;
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-public class GIFActivity extends BaseFragmentActivity {
+public class GIFActivity extends BFragmentActivity {
     private CameraModel mCameraModel;
     private GIFModel mGIFModel;
 

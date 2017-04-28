@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.model.CameraModel;
 import io.weichao.model.EarthMoonModel;
 import io.weichao.summary1704.R;
@@ -12,7 +11,7 @@ import io.weichao.summary1704.R;
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-public class EarthMoonActivity extends BaseFragmentActivity {
+public class EarthMoonActivity extends BFragmentActivity {
     private EarthMoonModel mSphereModel;
     private CameraModel mCameraModel;
 

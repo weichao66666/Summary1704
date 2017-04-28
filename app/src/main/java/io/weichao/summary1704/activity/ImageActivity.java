@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.summary1704.R;
 import io.weichao.summary1704.config.Constant;
 import io.weichao.util.BitmapUtil;
@@ -15,7 +14,7 @@ import io.weichao.view.ZoomImageView;
 /**
  * Created by WeiChao on 2016/6/14.
  */
-public class ImageActivity extends BaseFragmentActivity {
+public class ImageActivity extends BFragmentActivity {
     public ZoomImageView zoomImageView;
 
     @Override

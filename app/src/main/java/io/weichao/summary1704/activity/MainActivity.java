@@ -5,11 +5,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.summary1704.R;
 import io.weichao.summary1704.model.MultPagesModel;
 
-public class MainActivity extends BaseFragmentActivity {
+public class MainActivity extends BFragmentActivity {
     private MultPagesModel mMultPagesModel;
 
     @Override

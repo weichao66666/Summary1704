@@ -6,14 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.model.FaceDetectionModel;
 import io.weichao.summary1704.R;
 
 /**
  * Created by WEI CHAO on 2017/4/11.
  */
-public class FaceDetectionActivity extends BaseFragmentActivity {
+public class FaceDetectionActivity extends BFragmentActivity {
     private FaceDetectionModel mFaceDetectionModel;
 
     @Override

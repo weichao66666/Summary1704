@@ -6,14 +6,13 @@ import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import io.weichao.activity.BaseFragmentActivity;
 import io.weichao.summary1704.R;
 import io.weichao.summary1704.callback.DecodeCallback;
 import io.weichao.summary1704.model.CaptureModel;
 import io.weichao.summary1704.model.ViewPagerModel;
 import io.weichao.util.ConstantUtil;
 
-public class ExhibitActivity extends BaseFragmentActivity implements DecodeCallback {
+public class ExhibitActivity extends BFragmentActivity implements DecodeCallback {
     private RelativeLayout mRootView;
     private ViewPagerModel mViewPagerModel;
     private CaptureModel mCaptureModel;
